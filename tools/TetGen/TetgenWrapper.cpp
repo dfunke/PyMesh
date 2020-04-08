@@ -108,6 +108,9 @@ void TetgenWrapper::run() {
     m_tet_voxels.resize(out.numberoftetrahedra, 4);
     std::copy(out.tetrahedronlist, out.tetrahedronlist + out.numberoftetrahedra*4,
             m_tet_voxels.data());
+    m_tet_neighbors.resize(out.numberoftetrahedra, 4);
+    std::copy(out.neighborlist, out.neighborlist + out.numberoftetrahedra*4,
+            m_tet_neighbors.data());
 }
 
 std::string TetgenWrapper::generate_command_line_options() const {

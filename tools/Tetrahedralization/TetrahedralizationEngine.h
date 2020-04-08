@@ -75,6 +75,7 @@ class TetrahedralizationEngine {
         MatrixFr get_vertices() const { return m_vertices; }
         MatrixIr get_faces() const { return m_faces; }
         MatrixIr get_voxels() const { return m_voxels; }
+        MatrixIr get_neighbors() const { return m_neighbors; }
 
     protected:
         void preprocess();
@@ -85,6 +86,7 @@ class TetrahedralizationEngine {
         MatrixFr m_vertices;
         MatrixIr m_faces;
         MatrixIr m_voxels;
+        MatrixIr m_neighbors;
 
         Float m_ave_edge_length = 1.0;
         Float m_cell_radius_edge_ratio = 2.0;

@@ -176,6 +176,7 @@ class TetgenWrapper {
         const MatrixFr& get_vertices() const { return m_tet_vertices; }
         const MatrixIr& get_faces() const { return m_tet_faces; }
         const MatrixIr& get_voxels() const { return m_tet_voxels; }
+        const MatrixIr& get_neighbors() const { return m_tet_neighbors; }
         const VectorI& get_regions() const { return m_regions; }
 
         std::string generate_command_line_options() const;
@@ -208,6 +209,7 @@ class TetgenWrapper {
         MatrixFr m_tet_vertices;
         MatrixIr m_tet_faces;
         MatrixIr m_tet_voxels;
+        MatrixIr m_tet_neighbors;
         VectorI  m_regions;
 };
 

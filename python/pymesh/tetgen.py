@@ -4,7 +4,7 @@ from .meshio import form_mesh
 class tetgen(PyMesh.tetgen):
     """ Wrapper around Si's `TetGen <http://wias-berlin.de/software/tetgen/>`_.
 
-    All attributes, except ``vertices``, ``faces``, ``voxels`` and ``mesh``,
+    All attributes, except ``vertices``, ``faces``, ``voxels``, ``neighbors`` and ``mesh``,
     are either input geometry or configuration parameters.
 
     Attributes:
@@ -70,6 +70,8 @@ class tetgen(PyMesh.tetgen):
         faces (:class:`numpy.ndarray`): Faces of the output tet mesh.
 
         voxels (:class:`numpy.ndarray`): Voxels of the output tet mesh.
+
+        neighbors (:class:`numpy.ndarray`): Neighbors of the output tet mesh.
 
         mesh (:class:`Mesh`): Output tet mesh.
 

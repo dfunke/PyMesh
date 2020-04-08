@@ -26,6 +26,7 @@ void TetGenEngine::run() {
     m_vertices = tetgen.get_vertices();
     m_faces = tetgen.get_faces();
     m_voxels = tetgen.get_voxels();
+    m_voxels = tetgen.get_neighbors();
 }
 
 #endif

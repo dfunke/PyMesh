@@ -84,6 +84,8 @@ void init_TetgenWrapper(py::module& m) {
                 py::return_value_policy::reference_internal)
         .def_property_readonly("voxels", &TetgenWrapper::get_voxels,
                 py::return_value_policy::reference_internal)
+        .def_property_readonly("neighbors", &TetgenWrapper::get_neighbors,
+                py::return_value_policy::reference_internal)
         .def_property_readonly("regions", &TetgenWrapper::get_regions,
                 py::return_value_policy::reference_internal)
         .def_property_readonly("flags",
